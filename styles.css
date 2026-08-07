@@ -1,0 +1,106 @@
+/* Base styles */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f7ea3e;
+  font-family: 'Poppins', sans-serif;
+  color: #1B1F2B;
+}
+
+/* Layout A: Pages with wrap container (onboarding, betaling) */
+body.layout-a {
+  display: flex;
+  justify-content: center;
+  padding: 32px 20px 60px;
+}
+
+/* Layout B: Simple centered pages (switch pages) */
+body.layout-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+/* Wrap container */
+.wrap {
+  max-width: 560px;
+  width: 100%;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #1B1F2B;
+}
+
+body.layout-a h1 {
+  font-size: 1.9rem;
+  margin: 0 0 20px 0;
+  line-height: 1.15;
+}
+
+body.layout-b h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 40px 0;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0 0 20px 0;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 32px 0 12px 0;
+}
+
+ul {
+  padding-left: 22px;
+  margin: 0 0 20px 0;
+}
+
+li {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+a {
+  color: #1B1F2B;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+body.layout-a a {
+  font-size: inherit;
+}
+
+body.layout-b a {
+  font-size: 2.2rem;
+}
+
+a.big-link {
+  display: inline-block;
+  font-size: 1.15rem;
+}
+
+/* QR Code */
+.qr-code {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 12px;
+  display: block;
+  margin: 8px 0 20px 0;
+  padding: 12px;
+}
