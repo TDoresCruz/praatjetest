@@ -8,42 +8,165 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
+<style>
+  /* Functional additions only - colors/fonts come from styles.css */
+
+  .step { display: none; }
+  .step.visible { display: block; }
+
+  .tip {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: -8px 0 20px 0;
+  }
+
+  .back-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0 0 20px 0;
+    color: #1B1F2B;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #1B1F2B;
+    color: #f7ea3e;
+    padding: 15px 18px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+  .btn:hover { background: #33384a; }
+
+  .btn.secondary {
+    background: #fff;
+    color: #1B1F2B;
+    border: 2px solid #1B1F2B;
+  }
+  .btn.secondary:hover { background: #f2f2f2; }
+
+  .choice-row {
+    display: flex;
+    gap: 12px;
+  }
+  .choice-row .btn { margin-top: 0; }
+
+  .store-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0 0 20px 0;
+  }
+  .store-links a.btn {
+    flex: 1;
+    min-width: 150px;
+    font-size: 0.95rem;
+  }
+
+  .manual-value {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 6px 0 18px 0;
+  }
+
+  .footer-note {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 2px solid #1B1F2B;
+  }
+  .footer-note p { margin: 0 0 8px 0; font-size: 0.95rem; }
+  .footer-note p:last-child { margin-bottom: 0; }
+</style>
 </head>
 <body class="layout-a">
   <div class="wrap">
     <h1>Dagelijks Sociaal Contact</h1>
 
-    <p>Welkom bij de start van het onderzoek naar Dagelijks Sociaal Contact van de Vrije Universiteit Amsterdam en Praatje.</p>
+    <!-- STEP 1: welcome + download -->
+    <div class="step" data-step="start">
+      <p>Welkom bij de start van het onderzoek naar Dagelijks Sociaal Contact van de Vrije Universiteit Amsterdam en Praatje.</p>
+      <p>Je kunt via twee simpele stappen deelnemen aan het onderzoek. Alles wat je nodig hebt om deel te nemen aan het onderzoek is de ESMira-app op je smartphone. Dit is een speciaal voor wetenschappelijk onderzoek ontwikkelde app die voldoet aan alle privacy-eisen en je data dus optimaal beschermt.</p>
 
-    <p>Je kunt via twee simpele stappen deelnemen aan het onderzoek. Alles wat je nodig hebt om deel te nemen aan het onderzoek is de ESMira-app op je smartphone. Dit is een speciaal voor wetenschappelijk onderzoek ontwikkelde app die voldoet aan alle privacy-eisen en je data dus optimaal beschermt.</p>
-    <p>Volg de stappen hieronder om deel te nemen. Kom je er niet uit, kijk dan <a href="https://onderzoek.praat.je/docs/ESMira_FAQ_InstallerenStarten.pdf" target="_blank" rel="noopener noreferrer nofollow">hier</a>. </p>
-    <h2>Stap 1. Download de ESMira app door:</h2>
-    <ul>
-      <li>In je appstore te zoeken naar ESMira en deze te downloaden of</li>
-      <li>Door deze pagina op je smartphone te openen en de app te downloaden. Druk hier op
-        <a href="https://play.google.com/store/apps/details?id=at.jodlidev.esmira" target="_blank" rel="noopener noreferrer nofollow">Google Play</a>
-        als je een Android hebt of op
-        <a href="https://apps.apple.com/gb/app/esmira/id1538774594" target="_blank" rel="noopener noreferrer nofollow">App Store</a>
-        voor Apple.
-      </li>
-    </ul>
+      <h2>Stap 1. Download de ESMira app door:</h2>
+      <ul>
+        <li>In je appstore te zoeken naar ESMira en deze te downloaden of</li>
+        <li>Door deze pagina op je smartphone te openen en de app te downloaden:</li>
+      </ul>
+      <div class="store-links">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=at.jodlidev.esmira" target="_blank" rel="noopener noreferrer nofollow">Google Play (Android)</a>
+        <a class="btn" href="https://apps.apple.com/gb/app/esmira/id1538774594" target="_blank" rel="noopener noreferrer nofollow">App Store (Apple)</a>
+      </div>
 
-    <h2>Stap 2. Na het downloaden van de ESMira app:</h2>
-    <ul>
-      <li>
-        <strong>Heb je deze pagina geopend op je smartphone?</strong> Klik dan op
-        <a class="big-link" href="esmira://onderzoek.praat.je/6634-vupraatje1?fallback=">deze link</a>.
-        ESMira opent dan automatisch.
-      </li>
-      <li>
-        <strong>Heb je deze pagina geopend op een ander apparaat?</strong> Start dan de ESMira app en volg de instructies. Als gevraagd wordt naar een QR-code selecteer dan ja en <strong>scan deze QR-code met je smartphone</strong>.
-        <img class="qr-code" src="data:image/gif;base64,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" alt="QR-code voor ESMira" />
-      </li>
-      <li>
-        Heeft je telefoon <strong>geen camera</strong> en heb je deze pagina <strong>niet geopend op je smartphone</strong>? Open dan eerst de ESMira app op je smartphone, als gevraagd wordt naar een QR-code selecteer dan nee. Als je gevraagd wordt naar de server, selecteer dan "Handmatig invoeren". Typ vervolgens "onderzoek.praat.je/". Als je gevraagd wordt naar een toegangscode, selecteer dan "Ja" en voer "vupraatje1" in.
-      </li>
-    </ul>
-    <h2>Kom je er helemaal niet uit? Neem dan contact op met <a href="mailto:t.dorescruz@vu.nl?subject=Vraag%20over%20Aanmelden%20Dagelijks%20Sociaal%20Contact">t.dorescruz@vu.nl</a></h2>
+      <button class="btn" onclick="goTo('vraag')">Ik heb de app gedownload</button>
+    </div>
+
+    <!-- STEP 2: device question -->
+    <div class="step" data-step="vraag">
+      <button class="back-btn" onclick="goTo('start')">&larr; Terug</button>
+      <h2>Stap 2.</h2>
+      <p>Heb je deze pagina geopend op je smartphone?</p>
+      <p class="tip">TIP: het is het makkelijkst om deze pagina te openen op de browser van je smartphone.</p>
+      <div class="choice-row">
+        <button class="btn" onclick="goTo('deeplink')">Ja</button>
+        <button class="btn secondary" onclick="goTo('qr')">Nee</button>
+      </div>
+    </div>
+
+    <!-- STEP 2a: yes, on smartphone -> deep link -->
+    <div class="step" data-step="deeplink">
+      <button class="back-btn" onclick="goTo('vraag')">&larr; Terug</button>
+      <a class="btn" href="esmira://onderzoek.praat.je/6634-vupraatje1?fallback=">Open ESMira</a>
+    </div>
+
+    <!-- STEP 2b: no -> QR code shown immediately -->
+    <div class="step" data-step="qr">
+      <button class="back-btn" onclick="goTo('vraag')">&larr; Terug</button>
+      <p>Als er gevraagd wordt naar een QR-code druk dan ja en scan deze code.</p>
+      <img class="qr-code" src="data:image/gif;base64,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" alt="QR-code voor ESMira" />
+      <button class="btn" onclick="goTo('manual')">Het lukt mij niet om de QR-code te scannen</button>
+    </div>
+
+    <!-- STEP: manual entry -->
+    <div class="step" data-step="manual">
+      <button class="back-btn" onclick="goTo('qr')">&larr; Terug</button>
+      <p>Open dan eerst de ESMira app op je smartphone, als gevraagd wordt naar een QR-code selecteer dan nee.</p>
+      <p>Als je gevraagd wordt naar de server, selecteer dan "Handmatig invoeren" en typ:</p>
+      <span class="manual-value">onderzoek.praat.je/</span>
+      <p>Als je gevraagd wordt naar een toegangscode, selecteer dan "Ja" en voer in:</p>
+      <span class="manual-value">vupraatje1</span>
+    </div>
+
+    <div class="footer-note">
+      <p>Kom je er niet helemaal uit, kijk dan eerst <a href="https://onderzoek.praat.je/docs/ESMira_FAQ_InstallerenStarten.pdf" target="_blank" rel="noopener noreferrer nofollow">hier</a>.</p>
+      <p>Lukt het nog niet of heb je vragen, neem dan contact op met <a href="mailto:t.dorescruz@vu.nl?subject=Vraag%20over%20Aanmelden%20Dagelijks%20Sociaal%20Contact">t.dorescruz@vu.nl</a>.</p>
+    </div>
   </div>
+
+<script>
+  function goTo(step) {
+    document.querySelectorAll('.step').forEach(function(s) {
+      s.classList.remove('visible');
+    });
+    var target = document.querySelector('.step[data-step="' + step + '"]');
+    if (target) target.classList.add('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  goTo('start');
+</script>
 </body>
 </html>
